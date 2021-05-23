@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <title>mapmo</title>
+</head>
+
+<body>
+  <div class="container1">
+    <div class="logo">
+      <span class="logo__ment">당신의 찬란한 시간들이 아깝지 않게.</span>
+      <span class="logo__btn">
+        <a href="#">map<br>mo</a>
+      </span>
+    </div>
+    <div class="main">
+      <span>서울, 런던, 파리, 뉴욕, 도쿄, 베이징<br>
+        전 세계 어디에서든지<br>
+        당신의 경험과 생각을 공유하고 기록해보세요.
+      </span>
+    </div>
+    <button class="start">
+      <span>시작하기</span>
+    </button>
+  </div>
+
+  <div class="container2">
+
+    <div class="public">
+      <img class="public__img" src="{% static 'img/index-public.jpg' %}" alt="">
+      <div class="public__content">
+        <i class="fas fa-users"></i>
+        <span>public</span>
+        <ul>
+          <li>다른 사람들과 자유롭게 고민을 나눠보세요.</li>
+          <li>public에서는 사용자의 익명성을 보장합니다.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="friends">
+      <img class="friends__img" src="{% static 'img/index-friends.jpg' %}" alt="">
+      <div class="friends__content">
+        <i class="fas fa-user-friends"></i>
+        <span>friends</span>
+        <ul>
+          <li>친구들과 함께한 시간들을 기록해보세요.</li>
+          <li>friends에서는 친구들을 팔로우할 수 있습니다.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="private">
+      <img class="private__img" src="{% static 'img/index-private.jpg' %}" alt="">
+      <div class="private__content">
+        <i class="fas fa-user"></i>
+        <span>private</span>
+        <ul>
+          <li>나만의 다이어리를 작성해보세요.</li>
+          <li>private에서는 사용자가 작성한 글만 확인할 수 있습니다.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
