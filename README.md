@@ -17,4 +17,3 @@
 - README 작성법 : https://gist.github.com/ihoneymon/652be052a0727ad59601
 - Notion : https://www.notion.so/map-mo-3ae5a4750c70464cb00ee2719c9adae5
 - 디자인 : https://www.figma.com/file/xw27vs6gO3Z3RplGw7XtQe/map-mo?node-id=95%3A37
-- 테스트
