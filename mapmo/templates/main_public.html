@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>main-public</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/main_public.css' %}">
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRgCEQvHMAJaK6SAYkpbbizy5heP94EJk&callback=initMap&libraries=&v=weekly"
+    async defer></script>
+  <script src="{% static 'js/google_maps.js' %}"></script>
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <header>
+    <div class="logo-and-status">
+      <a class="logo" href="#">map<br>mo</a>
+      <ul class="status">
+        <a href="#">
+          <li class="selected">public</li>
+        </a>
+        <a href="#">
+          <li>friends</li>
+        </a>
+        <a href="#">
+          <li>public</li>
+        </a>
+      </ul>
+    </div>
+    <button class="account-btn">
+      <i class="fas fa-bars"></i>
+      <i class="fas fa-user-circle"></i>
+    </button>
+  </header>
+
+</body>
+
+</html>

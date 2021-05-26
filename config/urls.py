@@ -20,4 +20,5 @@ from mapmo import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('main/public', views.main_public, name='main_public'),
 ]

@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@700&display=swap");
+
+:root {
+  /* Color */
+  --white-color: #eaeaea;
+  --gray-color: #808080;
+  --red-color: #e84c3c;
+  --black-color: #0e171d;
+
+  /* Font Size */
+  --font-large: 5rem;
+  --font-medium: 1rem;
+
+  /* Text Shadow */
+  --text-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px;
+  --box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  /* Padding */
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+}
+
+#map {
+  height: 100%;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1.5rem 3.5rem;
+}
+
+header .logo-and-status {
+  display: flex;
+}
+
+header .logo-and-status .logo {
+  font-family: "Courgette";
+  font-size: var(--font-large);
+  line-height: 5rem;
+  color: var(--white-color);
+  text-shadow: var(--text-shadow);
+}
+
+header .logo-and-status .status {
+  display: flex;
+  margin: 2rem;
+}
+
+header .logo-and-status .status a {
+  font-size: var(--font-medium);
+  color: var(--gray-color);
+  padding-right: 3rem;
+}
+
+header .logo-and-status .status .selected {
+  color: var(--white-color);
+}
+
+header .account-btn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 6rem;
+  border: none;
+  box-shadow: var(--box-shadow);
+  background-color: var(--white-color);
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+header .account-btn .fa-bars {
+  font-size: calc(var(--font-medium) * 1.5);
+  color: var(--black-color);
+}
+
+header .account-btn .fa-user-circle {
+  font-size: calc(var(--font-medium) * 1.8);
+  color: var(--black-color);
+}
