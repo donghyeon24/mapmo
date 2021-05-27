@@ -29,6 +29,6 @@
 ## 📗 참고 자료
 
 - 노션 : https://www.notion.so/map-mo-3ae5a4750c70464cb00ee2719c9adae5
--  : https://www.figma.com/file/xw27vs6gO3Z3RplGw7XtQe/map-mo?node-id=95%3A37
+- 피그마 : https://www.figma.com/file/xw27vs6gO3Z3RplGw7XtQe/map-mo?node-id=95%3A37
 - README 작성법 : https://gist.github.com/ihoneymon/652be052a0727ad59601
 - 구글 맵스 API 사용법 : https://webruden.tistory.com/378
