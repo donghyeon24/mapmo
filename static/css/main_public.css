@@ -36,11 +36,11 @@ body {
 }
 
 header {
-  position: absolute;
-  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  position: absolute;
+  top: 0;
   width: 100%;
   padding: 1.5rem 3.5rem;
 }
@@ -78,11 +78,11 @@ header .account-btn {
   align-items: center;
   width: 6rem;
   height: 3rem;
-  border-radius: 6rem;
+  margin-top: 2rem;
   border: none;
+  border-radius: 6rem;
   box-shadow: var(--box-shadow);
   background-color: var(--white-color);
-  margin-top: 2rem;
   cursor: pointer;
 }
 
@@ -94,4 +94,52 @@ header .account-btn .fa-bars {
 header .account-btn .fa-user-circle {
   font-size: calc(var(--font-medium) * 1.8);
   color: var(--black-color);
+}
+
+header .account-menu {
+  display: none;
+}
+
+header .account-menu.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 7rem;
+  right: 3.5rem;
+  width: 15rem;
+  height: 9rem;
+  padding-left: 2rem;
+  border-radius: 1rem;
+  background-color: var(--white-color);
+  font-size: calc(var(--font-medium) * 1.5);
+}
+
+header .account-menu.active .login a {
+  font-weight: 700;
+  color: var(--black-color);
+}
+
+header .account-menu.active .signup a {
+  color: var(--black-color);
+}
+
+.write-btn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.write-btn button {
+  width: 11.25rem;
+  height: 3.75rem;
+  padding-bottom: 0.188em;
+  border: 5px solid var(--white-color);
+  background-color: rgba(255, 255, 255, 0);
+  font-size: calc(var(--font-medium) * 1.5);
+  font-weight: 700;
+  color: var(--white-color);
+  cursor: pointer;
 }

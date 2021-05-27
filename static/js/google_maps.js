@@ -2,7 +2,7 @@ let map;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 30, lng: 75 },
+    center: { lat: 25, lng: 20 },
     zoom: 3,
     disableDefaultUI: true,
     styles: [
