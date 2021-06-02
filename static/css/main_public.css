@@ -182,18 +182,20 @@ header .account-menu.active .signup a {
 .modal .modal-box .city {
   display: flex;
   justify-content: center;
-  margin: 2.5rem auto;
+  padding-left: 0;
+  margin: 2.5rem auto 0 auto;
   text-align: center;
 }
 
 .modal .modal-box .city li {
+  height: 8rem;
   margin-right: 0.7rem;
   list-style: none;
 }
 
 .modal .modal-box .city li .up {
   width: 6.2rem;
-  height: 3.8rem;
+  height: calc(50% - 0.2rem);
   border-radius: 0.5rem 0.5rem 0 0;
   background-color: var(--red-color);
   box-shadow: inset var(--box-shadow);
@@ -204,7 +206,7 @@ header .account-menu.active .signup a {
   position: relative;
   top: 0.2rem;
   width: 6.2rem;
-  height: 3.8rem;
+  height: calc(50% - 0.2rem);
   border-radius: 0 0 0.5rem 0.5rem;
   background-color: var(--red-color);
 }
@@ -233,6 +235,79 @@ header .account-menu.active .signup a {
   font-weight: 700;
   color: var(--white-color);
   cursor: pointer;
+}
+
+.modal .modal-box .map-and-form {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 100%;
+  margin: 4.5rem auto;
+}
+
+.modal .modal-box .map-and-form .map-and-location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+  height: 100%;
+}
+
+.modal .modal-box .map-and-form .map-and-location #mini-map {
+  width: 100%;
+  height: 97%;
+}
+
+.modal .modal-box .map-and-form .map-and-location .location {
+  margin-top: 0.25rem;
+  font-size: var(--font-medium);
+  color: white;
+}
+
+.modal .modal-box .map-and-form .form {
+  display: flex;
+  justify-content: center;
+  width: 65%;
+  height: calc(97% - 0.25rem);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.modal .modal-box .map-and-form .form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 85%;
+  height: 100%;
+}
+
+.modal .modal-box .map-and-form .form form * {
+  border: 2.5px solid white;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.modal .modal-box .map-and-form .form form input {
+  height: 7.5%;
+}
+
+.modal .modal-box .map-and-form .form form input[type="file"] {
+  width: 20%;
+  height: 7.5%;
+}
+
+.modal .modal-box .map-and-form .form form textarea {
+  height: 37.5%;
+}
+
+.modal .modal-box .map-and-form .form form input::placeholder,
+.modal .modal-box .map-and-form .form form textarea::placeholder {
+  font-size: calc(var(--font-medium) * 1.4);
+  font-weight: lighter;
+  color: white;
+
+  background-image: url(../img/user-solid.svg);
+  background-size: contain;
+  background-position: 98% top;
+  background-repeat: no-repeat;
 }
 
 .hidden {
