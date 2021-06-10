@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@700&display=swap');
+
+:root {
+  /* Color */
+  --white-color: #eaeaea;
+  --gray-color: #808080;
+  --gray-light-color: #c4c4c4;
+  --red-color: #e84c3c;
+  --green-color: #109579;
+  --black-color: #0e171d;
+
+  /* Font Size */
+  --font-large: 5rem;
+  --font-medium: 1rem;
+
+  /* Text Shadow */
+  --text-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px;
+  --box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+  /* Padding */
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 1.5rem 3.5rem;
+}
+
+header .logo {
+  font-family: 'Courgette';
+  font-size: var(--font-large);
+  line-height: 5rem;
+  color: black;
+  text-shadow: var(--text-shadow);
+}
+
+header .account-btn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 6rem;
+  height: 3rem;
+  margin-top: 2rem;
+  border: none;
+  border-radius: 6rem;
+  box-shadow: var(--box-shadow);
+  background-color: var(--white-color);
+  cursor: pointer;
+}
+
+header .account-btn .fa-bars {
+  font-size: calc(var(--font-medium) * 1.5);
+  color: black;
+}
+
+header .account-btn img {
+  width: 2rem;
+  border-radius: 100px;
+  border: 1px solid black;
+}
+
+header .account-menu {
+  display: none;
+}
+
+header .account-menu.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 7rem;
+  right: 3.5rem;
+  width: 15rem;
+  height: 9rem;
+  padding-left: 2rem;
+  border-radius: 1rem;
+  background-color: var(--white-color);
+  font-size: calc(var(--font-medium) * 1.5);
+}
+
+header .account-menu.active .login a {
+  font-weight: 700;
+  color: black;
+}
+
+header .account-menu.active .signup a {
+  color: black;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+main .container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 60%;
+}
+
+main .container .title {
+  margin-bottom: 6rem;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+main .container .profile-setting {
+  list-style: none;
+  padding-left: 0;
+}
+
+main .container .profile-setting li {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--gray-light-color);
+  font-size: calc(var(--font-medium) * 1.2);
+}
+
+main .container .profile-setting li .name-and-value {
+  display: flex;
+  flex-direction: column;
+}
+
+main .container .profile-setting li .name-and-value img {
+  width: 2.8rem;
+  border-radius: 100px;
+  border: 1px solid var(--green-color);
+}
+
+main .container .profile-setting li .name-and-value .name {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+main .container .profile-setting li a {
+  font-weight: 700;
+  color: var(--green-color);
+}
