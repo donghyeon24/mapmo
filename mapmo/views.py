@@ -9,10 +9,13 @@ def main_public(request):
   return render(request,'main_public.html')
 
 def write_public(request):
-  PublicPost = Public()
-  PublicPost.name = request.GET['name']
-  PublicPost.title = request.GET['title']
-  PublicPost.img = request.GET['img']
-  PublicPost.body = request.GET['body']
-  PublicPost.save()
-  return render(request,"main_public.html")
+  if request.method == 'POST':
+    PublicPost = Public()
+    PublicPost.name = request.POST['name']
+    PublicPost.title = request.POST['title']
+    PublicPost.img = request.FILES['img']
+    PublicPost.body = request.POST['body']
+    PublicPost.save()
+    return render(request,"main_public.html")
+  else:
+    return render(request,"index.html")
