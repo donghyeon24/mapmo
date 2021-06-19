@@ -55,7 +55,7 @@
   </div>
 
   <div class="modal hidden">
-    <div class="background blur"></div>
+    <div class="background"></div>
     <div class="modal-box">
       <ul class="city">
         <li>
@@ -91,12 +91,23 @@
       </ul>
 
       <main class="map-and-form">
-        <section class="map"></section>
-        <section class="form"></section>
+        <section class="map-and-location">
+          <div id="mini-map"></div>
+          <span class="location">
+            London HA9 0WS, United Kingdom</span>
+        </section>
+        <section class="form">
+          <form action="{% url 'write_public' %}" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="   name">
+            <input type="text" name="title" placeholder="   title">
+            <input type="file" name="img" placeholder="image">
+            <textarea name="body" cols="30" rows="10" placeholder="   body"></textarea>
+          </form>
+        </section>
       </main>
 
       <div class="submit-btn">
-        <button>작성하기</button>
+        <button type="submit">작성하기</button>
       </div>
     </div>
   </div>
