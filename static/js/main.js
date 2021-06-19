@@ -23,3 +23,4 @@ const writeClose = () => {
 
 document.querySelector(".write-btn").addEventListener("click", writeOpen);
 document.querySelector(".background").addEventListener("click", writeClose);
+
