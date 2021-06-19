@@ -12,8 +12,18 @@
   <link rel="stylesheet" href="{% static 'css/index.css' %}">
   <title>mapmo</title>
 </head>
+<script>
+$('container1').on('scroll touchmove mousewheel', function(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  return false;
+});
 
-<body scroll="no">
+
+
+
+</script>
+<body>
   <div class="container1">
     <div class="logo">
       <span class="logo__ment">당신의 찬란한 시간들이 아깝지 않게.</span>
@@ -27,47 +37,9 @@
         당신의 경험과 생각을 공유하고 기록해보세요.
       </span>
     </div>
-    <button type="button" class="start-btn"  onclick="location.href =  '#target';">
+    <button type="button" class="start-btn"  onclick="location.href =  '{% url 'choice' %}';">
       <span>시작하기</span>
     </button>
-  </div>
-
-  <a name="target"> </a><div class="container2">
-    <div class="public">
-      <a href={% url 'main_public' %}>
-      <img class="public__img" src="{% static 'img/index-public.jpg' %}" alt="">
-      <div class="public__content">
-        <i class="fas fa-users"></i>
-        <span>public</span>
-        <ul>
-          <li>다른 사람들과 자유롭게 고민을 나눠보세요.</li>
-          <li>public에서는 사용자의 익명성을 보장합니다.</li>
-        </ul>
-      </div>
-    </a>
-    </div>
-    <div class="friends">
-      <img class="friends__img" src="{% static 'img/index-friends.jpg' %}" alt="">
-      <div class="friends__content">
-        <i class="fas fa-user-friends"></i>
-        <span>friends</span>
-        <ul>
-          <li>친구들과 함께한 시간들을 기록해보세요.</li>
-          <li>friends에서는 친구들을 팔로우할 수 있습니다.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="private">
-      <img class="private__img" src="{% static 'img/index-private.jpg' %}" alt="">
-      <div class="private__content">
-        <i class="fas fa-user"></i>
-        <span>private</span>
-        <ul>
-          <li>나만의 다이어리를 작성해보세요.</li>
-          <li>private에서는 사용자가 작성한 글만 확인할 수 있습니다.</li>
-        </ul>
-      </div>
-    </div>
   </div>
 </body>
 

@@ -5,6 +5,9 @@ from .models import Public
 def index(request):
   return render(request, 'index.html')
 
+def choice(request):
+  return render(request, 'choice.html')
+
 def main_public(request):
   return render(request,'main_public.html')
 
