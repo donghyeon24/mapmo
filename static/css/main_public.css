@@ -170,7 +170,7 @@ header .account-menu.active .signup a {
   position: absolute;
   width: 70vw;
   height: 90vh;
-  padding: 15px;
+  padding: 15px 0;
   border-radius: 4rem;
   background: linear-gradient(
     var(--white-color),
@@ -307,6 +307,139 @@ header .account-menu.active .signup a {
   background-size: contain;
   background-position: 98% top;
   background-repeat: no-repeat;
+}
+
+/* preview-list */
+.modal .modal-box .preview-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.modal .modal-box .preview-list .to-prev-btn,
+.modal .modal-box .preview-list .to-post-btn {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  cursor: pointer;
+  filter: blur(1px);
+}
+
+.modal .modal-box .preview-list .to-prev-btn .sm,
+.modal .modal-box .preview-list .to-post-btn .sm {
+  font-size: 1rem;
+}
+
+.modal .modal-box .preview-list .to-prev-btn .md,
+.modal .modal-box .preview-list .to-post-btn .md {
+  font-size: 2rem;
+}
+
+.modal .modal-box .preview-list .to-prev-btn .lg,
+.modal .modal-box .preview-list .to-post-btn .lg {
+  font-size: 3rem;
+}
+
+.modal .modal-box .preview-list ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 1600px; */
+  padding: 0 1rem;
+  list-style: none;
+  /* overflow-x: scroll; */
+}
+
+.modal .modal-box .preview-list ul {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.modal .modal-box .preview-list ul::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+/* .modal .modal-box .preview-list ul li {
+  background-size: cover;
+  background-position: center;
+}
+
+.modal .modal-box .preview-list ul .preview1,
+.modal .modal-box .preview-list ul .preview7 {
+  width: 120px;
+  height: 120px;
+  filter: blur(0.75rem);
+}
+
+.modal .modal-box .preview-list ul .preview2,
+.modal .modal-box .preview-list ul .preview6 {
+  width: 200px;
+  height: 200px;
+  filter: blur(0.5rem);
+}
+
+.modal .modal-box .preview-list ul .preview3,
+.modal .modal-box .preview-list ul .preview5 {
+  width: 300px;
+  height: 300px;
+  filter: blur(0.25rem);
+}
+
+.modal .modal-box .preview-list ul .preview-center {
+  width: 450px;
+  height: 450px;
+  background-image: url('../img/preview-center.jpg');
+}
+
+.modal .modal-box .preview-list ul .preview1 {
+  background-image: url('../img/preview1.jpg');
+}
+
+.modal .modal-box .preview-list ul .preview2 {
+  background-image: url('../img/preview2.jpg');
+}
+
+.modal .modal-box .preview-list ul .preview3 {
+  background-image: url('../img/preview3.jpg');
+}
+
+.modal .modal-box .preview-list ul .preview5 {
+  background-image: url('../img/preview5.jpg');
+}
+
+.modal .modal-box .preview-list ul .preview6 {
+  background-image: url('../img/preview6.jpg');
+}
+
+.modal .modal-box .preview-list ul .preview7 {
+  background-image: url('../img/preview.jpg');
+} */
+
+.modal .modal-box .preview-list ul .preview1 img,
+.modal .modal-box .preview-list ul .preview7 img {
+  width: 100px;
+  height: 100px;
+  filter: blur(0.75rem);
+}
+
+.modal .modal-box .preview-list ul .preview2 img,
+.modal .modal-box .preview-list ul .preview6 img {
+  width: 180px;
+  height: 180px;
+  filter: blur(0.5rem);
+}
+
+.modal .modal-box .preview-list ul .preview3 img,
+.modal .modal-box .preview-list ul .preview5 img {
+  width: 280px;
+  height: 280px;
+  filter: blur(0.25rem);
+}
+
+.modal .modal-box .preview-list ul .preview-center img {
+  width: 420px;
+  height: 420px;
 }
 
 .hidden {
