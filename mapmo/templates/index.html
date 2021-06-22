@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <title>mapmo</title>
+</head>
+<script>
+$('container1').on('scroll touchmove mousewheel', function(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  return false;
+});
+
+
+
+
+</script>
+<body>
+  <div class="container1">
+    <div class="logo">
+      <span class="logo__ment">당신의 찬란한 시간들이 아깝지 않게.</span>
+      <span class="logo__btn">
+        <a href="#">map<br>mo</a>
+      </span>
+    </div>
+    <div class="main">
+      <span>서울, 런던, 파리, 뉴욕, 도쿄, 베이징<br>
+        전 세계 어디에서든지<br>
+        당신의 경험과 생각을 공유하고 기록해보세요.
+      </span>
+    </div>
+    <button type="button" class="start-btn"  onclick="location.href = '{% url "choice" %}';">
+      <span>시작하기</span>
+    </button>
+  </div>
+</body>
+
+</html>

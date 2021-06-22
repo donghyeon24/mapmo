@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* container1 */
+.container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("/static/img/paris-view.jpg");
+  background-size: cover;
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 2.75em 0;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo__ment {
+  font-size: 1.125rem;
+  color: white;
+}
+
+.logo__btn a {
+  font-family: "Courgette";
+  font-size: 5rem;
+  line-height: 5rem;
+  color: #ddfd18;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px;
+}
+
+.main {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  margin-bottom: 6rem;
+}
+
+.start-btn {
+  width: 11.25rem;
+  height: 3.75rem;
+  background-color: rgba(255, 255, 255, 0);
+  border: 5px solid white;
+  padding-bottom: 0.188em;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* container2 */
+.container2 {
+  display: flex;
+  height: 100vh;
+}
+
+.container2 img {
+  width: 33.3vw;
+  height: 100vh;
+  position: absolute;
+  opacity: 1;
+}
+
+.friends__img {
+  left: 33.3vw;
+}
+
+.private__img {
+  left: 66.6vw;
+}
+
+.public__content,
+.friends__content,
+.private__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33.3vw;
+  height: 100vh;
+  opacity: 0;
+}
+
+.public:hover .public__img,
+.friends:hover .friends__img,
+.private:hover .private__img {
+  opacity: 0.5;
+}
+
+.public:hover .public__content,
+.friends:hover .friends__content,
+.private:hover .private__content {
+  opacity: 1;
+}
