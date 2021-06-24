@@ -309,6 +309,7 @@ header .account-menu.active .signup a {
   background-repeat: no-repeat;
 }
 
+
 /* preview-list */
 .modal .modal-box .preview-list {
   display: flex;
@@ -441,6 +442,7 @@ header .account-menu.active .signup a {
   width: 420px;
   height: 420px;
 }
+
 
 .hidden {
   display: none;

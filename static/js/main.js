@@ -95,6 +95,7 @@ const toPost = () => {
   previewCenter.classList.remove('preview-center');
   previewCenter.classList.add('preview5');
 
+
   preview5.classList.remove('preview5');
   preview5.classList.add('preview6');
 
@@ -111,3 +112,7 @@ document
 document
   .querySelector('.modal .modal-box .preview-list .to-post-btn')
   .addEventListener('click', toPost);
+
+document.querySelector(".write-btn").addEventListener("click", writeOpen);
+document.querySelector(".background").addEventListener("click", writeClose);
+

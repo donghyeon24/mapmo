@@ -130,11 +130,18 @@ function initMap() {
       label: labels[i % labels.length],
     });
   });
+
+  // Options to pass along to the marker clusterer
+  const clusterOptions = {
+    imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
+    gridSize: 100,
+    zoomOnClick: false,
+    maxZoom: 10,
+  };
+
   // Add a marker clusterer to manage the markers.
-  new MarkerClusterer(map, markers, {
-    imagePath:
-      'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
-  });
+  new MarkerClusterer(map, markers, clusterOptions);
+
 
   const miniMap = new google.maps.Map(document.getElementById('mini-map'), {
     center: { lat: 25, lng: 20 },
@@ -262,7 +269,8 @@ function initMap() {
 }
 
 const locations = [
-  { lat: -31.56391, lng: -31.56391 },
+
+  { lat: -31.56391, lng: 147.154312 },
   { lat: -33.718234, lng: 150.363181 },
   { lat: -33.727111, lng: 150.371124 },
   { lat: -33.848588, lng: 151.209834 },

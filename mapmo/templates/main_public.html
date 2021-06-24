@@ -11,13 +11,14 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/main_public.css' %}">
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRgCEQvHMAJaK6SAYkpbbizy5heP94EJk&callback=initMap&libraries=&v=weekly"
-    async defer></script>
   <script src="{% static 'js/google_maps.js' %}" defer></script>
   <script src="{% static 'js/main.js' %}" defer></script>
   <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js" defer></script>
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRgCEQvHMAJaK6SAYkpbbizy5heP94EJk&callback=initMap&libraries=&v=weekly"
+  async defer></script>
 </head>
+
 
 <body>
   <div id="map"></div>
@@ -91,22 +92,27 @@
         </li>
       </ul>
 
-      <!-- <main class="map-and-form">
+
+      <!-- <main class="map-and-form"> 
+      
         <section class="map-and-location">
           <div id="mini-map"></div>
           <span class="location">
             London HA9 0WS, United Kingdom</span>
         </section>
         <section class="form">
-          <form action="">
+       <form method="POST" action="{% url 'write_public' %}" enctype="multipart/form-data">
+            {% csrf_token %}
             <input type="text" name="name" placeholder="   name">
             <input type="text" name="title" placeholder="   title">
             <input type="file" name="img" placeholder="image">
+            <input type="hidden" name="lat" id="lat" value=0.0> 
+            <input type="hidden" name="lng" id="lng" value=0.0>
             <textarea name="body" cols="30" rows="10" placeholder="   body"></textarea>
-          </form>
-        </section>
+        </form>
+</section>
       </main> -->
-
+      
       <main class="preview-list">
         <button class="to-prev-btn">
           <i class="fas fa-chevron-left sm"></i>
@@ -136,13 +142,16 @@
           <i class="fas fa-chevron-right md"></i>
           <i class="fas fa-chevron-right sm"></i>
         </button>
+
       </main>
 
       <div class="submit-btn">
-        <button>작성하기</button>
+        <button type="submit" name="submit">작성하기</button>
       </div>
+    </form>
     </div>
   </div>
+  <script src="{% static 'js/search_location.js' %}" defer></script>
 </body>
 
 </html>
