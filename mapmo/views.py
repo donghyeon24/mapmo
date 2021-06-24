@@ -11,6 +11,9 @@ def choice(request):
 def main_public(request):
   return render(request,'main_public.html')
 
+def main_friends(request):
+  return render(request,'main_friends.html')
+
 def write_public(request):
   if request.method == 'POST':
     PublicPost = Public()
