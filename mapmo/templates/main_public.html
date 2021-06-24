@@ -18,7 +18,8 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRgCEQvHMAJaK6SAYkpbbizy5heP94EJk&callback=initMap&libraries=&v=weekly"
     async defer></script>
   <script>
-    var get_location = "{{locations}}";
+    var get_location = "{{locations}}".replace(/&#x27;/g,"\"");
+    var placeData = JSON.parse(get_location);
 
     const locations = [
       
@@ -26,11 +27,13 @@
       { lat: -33.718234, lng: 150.363181 },
       { lat: -33.727111, lng: 150.371124 },
     ];
-    console.log(get_location);
+    console.log(locations);
+    
     for (const location of get_location){
 
-      console.log(location.lat);
+      locations.push(location);
     }
+    console.log(locations);
 
 
   </script>
