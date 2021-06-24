@@ -1,236 +1,254 @@
 function initMap() {
-  const map = new google.maps.Map(document.getElementById("map"), {
+  const map = new google.maps.Map(document.getElementById('map'), {
     center: { lat: 25, lng: 20 },
     zoom: 3,
     disableDefaultUI: true,
     styles: [
       {
-        featureType: "water",
+        featureType: 'water',
         stylers: [
           {
-            color: "#0e171d",
+            color: '#0e171d',
           },
         ],
       },
       {
-        featureType: "landscape",
+        featureType: 'landscape',
         stylers: [
           {
-            color: "#1e303d",
+            color: '#1e303d',
           },
         ],
       },
       {
-        featureType: "road",
+        featureType: 'road',
         stylers: [
           {
-            color: "#1e303d",
+            color: '#1e303d',
           },
         ],
       },
       {
-        featureType: "poi.park",
+        featureType: 'poi.park',
         stylers: [
           {
-            color: "#1e303d",
+            color: '#1e303d',
           },
         ],
       },
       {
-        featureType: "transit",
+        featureType: 'transit',
         stylers: [
           {
-            color: "#182731",
+            color: '#182731',
           },
           {
-            visibility: "simplified",
+            visibility: 'simplified',
           },
         ],
       },
       {
-        featureType: "poi",
-        elementType: "labels.icon",
+        featureType: 'poi',
+        elementType: 'labels.icon',
         stylers: [
           {
-            color: "#f0c514",
+            color: '#f0c514',
           },
           {
-            visibility: "off",
+            visibility: 'off',
           },
         ],
       },
       {
-        featureType: "poi",
-        elementType: "labels.text.stroke",
+        featureType: 'poi',
+        elementType: 'labels.text.stroke',
         stylers: [
           {
-            color: "#1e303d",
+            color: '#1e303d',
           },
           {
-            visibility: "off",
+            visibility: 'off',
           },
         ],
       },
       {
-        featureType: "transit",
-        elementType: "labels.text.fill",
+        featureType: 'transit',
+        elementType: 'labels.text.fill',
         stylers: [
           {
-            color: "#e77e24",
+            color: '#e77e24',
           },
           {
-            visibility: "off",
+            visibility: 'off',
           },
         ],
       },
       {
-        featureType: "road",
-        elementType: "labels.text.fill",
+        featureType: 'road',
+        elementType: 'labels.text.fill',
         stylers: [
           {
-            color: "#94a5a6",
+            color: '#94a5a6',
           },
         ],
       },
       {
-        featureType: "administrative",
-        elementType: "labels",
+        featureType: 'administrative',
+        elementType: 'labels',
         stylers: [
           {
-            visibility: "simplified",
+            visibility: 'simplified',
           },
           {
-            color: "#e84c3c",
+            color: '#e84c3c',
           },
         ],
       },
       {
-        featureType: "poi",
+        featureType: 'poi',
         stylers: [
           {
-            color: "#e84c3c",
+            color: '#e84c3c',
           },
           {
-            visibility: "off",
+            visibility: 'off',
           },
         ],
       },
     ],
   });
 
-  const miniMap = new google.maps.Map(document.getElementById("mini-map"), {
+  // Create an array of alphabetical characters used to label the markers.
+  const labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  // Add some markers to the map.
+  // Note: The code uses the JavaScript Array.prototype.map() method to
+  // create an array of markers based on a given "locations" array.
+  // The map() method here has nothing to do with the Google Maps API.
+  const markers = locations.map((location, i) => {
+    return new google.maps.Marker({
+      position: location,
+      label: labels[i % labels.length],
+    });
+  });
+  // Add a marker clusterer to manage the markers.
+  new MarkerClusterer(map, markers, {
+    imagePath:
+      'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
+  });
+
+  const miniMap = new google.maps.Map(document.getElementById('mini-map'), {
     center: { lat: 25, lng: 20 },
     zoom: 3,
     disableDefaultUI: true,
     styles: [
       {
-        featureType: "water",
+        featureType: 'water',
         stylers: [
           {
-            color: "#0e171d",
+            color: '#0e171d',
           },
         ],
       },
       {
-        featureType: "landscape",
+        featureType: 'landscape',
         stylers: [
           {
-            color: "#1e303d",
+            color: '#1e303d',
           },
         ],
       },
       {
-        featureType: "road",
+        featureType: 'road',
         stylers: [
           {
-            color: "#1e303d",
+            color: '#1e303d',
           },
         ],
       },
       {
-        featureType: "poi.park",
+        featureType: 'poi.park',
         stylers: [
           {
-            color: "#1e303d",
+            color: '#1e303d',
           },
         ],
       },
       {
-        featureType: "transit",
+        featureType: 'transit',
         stylers: [
           {
-            color: "#182731",
+            color: '#182731',
           },
           {
-            visibility: "simplified",
+            visibility: 'simplified',
           },
         ],
       },
       {
-        featureType: "poi",
-        elementType: "labels.icon",
+        featureType: 'poi',
+        elementType: 'labels.icon',
         stylers: [
           {
-            color: "#f0c514",
+            color: '#f0c514',
           },
           {
-            visibility: "off",
+            visibility: 'off',
           },
         ],
       },
       {
-        featureType: "poi",
-        elementType: "labels.text.stroke",
+        featureType: 'poi',
+        elementType: 'labels.text.stroke',
         stylers: [
           {
-            color: "#1e303d",
+            color: '#1e303d',
           },
           {
-            visibility: "off",
+            visibility: 'off',
           },
         ],
       },
       {
-        featureType: "transit",
-        elementType: "labels.text.fill",
+        featureType: 'transit',
+        elementType: 'labels.text.fill',
         stylers: [
           {
-            color: "#e77e24",
+            color: '#e77e24',
           },
           {
-            visibility: "off",
+            visibility: 'off',
           },
         ],
       },
       {
-        featureType: "road",
-        elementType: "labels.text.fill",
+        featureType: 'road',
+        elementType: 'labels.text.fill',
         stylers: [
           {
-            color: "#94a5a6",
+            color: '#94a5a6',
           },
         ],
       },
       {
-        featureType: "administrative",
-        elementType: "labels",
+        featureType: 'administrative',
+        elementType: 'labels',
         stylers: [
           {
-            visibility: "simplified",
+            visibility: 'simplified',
           },
           {
-            color: "#e84c3c",
+            color: '#e84c3c',
           },
         ],
       },
       {
-        featureType: "poi",
+        featureType: 'poi',
         stylers: [
           {
-            color: "#e84c3c",
+            color: '#e84c3c',
           },
           {
-            visibility: "off",
+            visibility: 'off',
           },
         ],
       },
@@ -239,6 +257,32 @@ function initMap() {
   new google.maps.Marker({
     position: center,
     map,
-    title: "Hello World!",
+    title: 'Hello World!',
   });
 }
+
+const locations = [
+  { lat: -31.56391, lng: -31.56391 },
+  { lat: -33.718234, lng: 150.363181 },
+  { lat: -33.727111, lng: 150.371124 },
+  { lat: -33.848588, lng: 151.209834 },
+  { lat: -33.851702, lng: 151.216968 },
+  { lat: -34.671264, lng: 150.863657 },
+  { lat: -35.304724, lng: 148.662905 },
+  { lat: -36.817685, lng: 175.699196 },
+  { lat: -36.828611, lng: 175.790222 },
+  { lat: -37.75, lng: 145.116667 },
+  { lat: -37.759859, lng: 145.128708 },
+  { lat: -37.765015, lng: 145.133858 },
+  { lat: -37.770104, lng: 145.143299 },
+  { lat: -37.7737, lng: 145.145187 },
+  { lat: -37.774785, lng: 145.137978 },
+  { lat: -37.819616, lng: 144.968119 },
+  { lat: -38.330766, lng: 144.695692 },
+  { lat: -39.927193, lng: 175.053218 },
+  { lat: -41.330162, lng: 174.865694 },
+  { lat: -42.734358, lng: 147.439506 },
+  { lat: -42.734358, lng: 147.501315 },
+  { lat: -42.735258, lng: 147.438 },
+  { lat: -43.999792, lng: 170.463352 },
+];
