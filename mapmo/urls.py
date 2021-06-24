@@ -23,6 +23,7 @@ from django.conf.urls import url
 urlpatterns = [
     path('public', views.main_public, name='main_public'),
     path('friends', views.main_friends, name='main_friends'),
+    path('private', views.main_private, name='main_private'),
     path('choice', views.choice, name='choice'),
     path('write_public', views.write_public, name="write_public"),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT,}),

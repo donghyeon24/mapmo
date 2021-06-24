@@ -7,14 +7,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>main-public</title>
+  <title>main_private</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-  <link rel="stylesheet" href="{% static 'css/main_public.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main_private.css' %}">
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRgCEQvHMAJaK6SAYkpbbizy5heP94EJk&callback=initMap&libraries=&v=weekly"
     async defer></script>
-  <script src="{% static 'js/google_maps.js' %}" defer></script>
+  <script src="{% static 'js/google_maps_private.js' %}" defer></script>
   <script src="{% static 'js/main.js' %}" defer></script>
 </head>
 
@@ -26,14 +26,14 @@
     <div class="logo-and-status">
       <a class="logo" href="#">map<br>mo</a>
       <ul class="status">
-        <a href="#">
+        <a href="{% url 'main_public' %}">
           <li>public</li>
         </a>
-        <a href="#">
-          <li class="selected">friends</li>
+        <a href="{% url 'main_friends' %}">
+          <li>friends</li>
         </a>
-        <a href="#">
-          <li>public</li>
+        <a href="{% url 'main_private' %}">
+          <li class="selected">private</li>
         </a>
       </ul>
     </div>
