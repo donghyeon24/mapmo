@@ -9,10 +9,13 @@ def choice(request):
   return render(request, 'choice.html')
 
 def main_public(request):
-  return render(request,'main_public.html')
+  return render(request, 'main_public.html')
 
 def main_friends(request):
-  return render(request,'main_friends.html')
+  return render(request, 'main_friends.html')
+
+def main_private(request):
+  return render(request, 'main_private.html')
 
 def write_public(request):
   if request.method == 'POST':

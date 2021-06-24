@@ -26,14 +26,14 @@
     <div class="logo-and-status">
       <a class="logo" href="#">map<br>mo</a>
       <ul class="status">
-        <a href="#">
+        <a href="{% url 'main_public' %}">
           <li>public</li>
         </a>
-        <a href="#">
+        <a href="{% url 'main_friends' %}">
           <li class="selected">friends</li>
         </a>
-        <a href="#">
-          <li>public</li>
+        <a href="{% url 'main_private' %}">
+          <li>private</li>
         </a>
       </ul>
     </div>
@@ -56,6 +56,64 @@
   </div>
 
   <div class="modal hidden">
+    <div class="background"></div>
+    <div class="modal-box">
+      <ul class="city">
+        <li>
+          <div class="up"></div>
+          <div class="down"></div>
+          <span>L</span>
+        </li>
+        <li>
+          <div class="up"></div>
+          <div class="down"></div>
+          <span>O</span>
+        </li>
+        <li>
+          <div class="up"></div>
+          <div class="down"></div>
+          <span>N</span>
+        </li>
+        <li>
+          <div class="up"></div>
+          <div class="down"></div>
+          <span>D</span>
+        </li>
+        <li>
+          <div class="up"></div>
+          <div class="down"></div>
+          <span>O</span>
+        </li>
+        <li>
+          <div class="up"></div>
+          <div class="down"></div>
+          <span>N</span>
+        </li>
+      </ul>
+
+      <main class="map-and-form">
+        <section class="map-and-location">
+          <div id="mini-map"></div>
+          <span class="location">
+            London HA9 0WS, United Kingdom</span>
+        </section>
+        <section class="form">
+          <form method="POST" action="{% url 'write_public' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="title" placeholder="   title">
+            <input type="file" name="img" placeholder="image">
+            <textarea name="body" cols="30" rows="10" placeholder="   body"></textarea>
+        </section>
+      </main>
+
+      <div class="submit-btn">
+        <button type="submit" name="submit">작성하기</button>
+      </div>
+    </form>
+    </div>
+  </div>
+
+    <div class="modal hidden">
     <div class="background"></div>
     <div class="modal-box">
       <ul class="city">

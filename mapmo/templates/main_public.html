@@ -27,14 +27,14 @@
     <div class="logo-and-status">
       <a class="logo" href="#">map<br>mo</a>
       <ul class="status">
-        <a href="#">
+        <a href="{% url 'main_public' %}">
           <li class="selected">public</li>
         </a>
-        <a href="#">
+        <a href="{% url 'main_friends' %}">
           <li>friends</li>
         </a>
-        <a href="#">
-          <li>public</li>
+        <a href="{% url 'main_private' %}">
+          <li>private</li>
         </a>
       </ul>
     </div>
