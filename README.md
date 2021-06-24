@@ -1,3 +1,5 @@
+## DONGHYEON branch
+
 ## 🌍 mapmo란?
 
 - "map + memo"의 합성어로 **위치기반 공유/기록 서비스**입니다.
@@ -31,4 +33,6 @@
 - Notion : https://www.notion.so/map-mo-3ae5a4750c70464cb00ee2719c9adae5
 - Figma : https://www.figma.com/file/xw27vs6gO3Z3RplGw7XtQe/map-mo?node-id=95%3A37
 - README 작성법 : https://gist.github.com/ihoneymon/652be052a0727ad59601
+- CSS 작성 순서 : http://milooy.github.io/TIL/CSS/css-property-order.html
 - 구글 맵스 API 사용법 : https://webruden.tistory.com/378
+- 모달창 구현법 : https://goddino.tistory.com/74

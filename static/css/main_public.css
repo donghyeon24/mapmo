@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@700&display=swap');
 
 :root {
   /* Color */
@@ -20,7 +20,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -32,7 +32,7 @@ body {
 }
 
 #map {
-  height: 100%;
+  height: 100vh;
 }
 
 header {
@@ -50,7 +50,7 @@ header .logo-and-status {
 }
 
 header .logo-and-status .logo {
-  font-family: "Courgette";
+  font-family: 'Courgette';
   font-size: var(--font-large);
   line-height: 5rem;
   color: var(--white-color);
@@ -63,9 +63,10 @@ header .logo-and-status .status {
 }
 
 header .logo-and-status .status a {
+  height: 1em;
+  margin-right: 3rem;
   font-size: var(--font-medium);
   color: var(--gray-color);
-  padding-right: 3rem;
 }
 
 header .logo-and-status .status .selected {
@@ -128,8 +129,8 @@ header .account-menu.active .signup a {
   position: absolute;
   bottom: 0;
   width: 100%;
-  text-align: center;
   padding: 4rem 0;
+  text-align: center;
 }
 
 .write-btn button {
@@ -142,4 +143,172 @@ header .account-menu.active .signup a {
   font-weight: 700;
   color: var(--white-color);
   cursor: pointer;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal .background {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1rem);
+}
+
+.modal .modal-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  width: 70vw;
+  height: 90vh;
+  padding: 15px;
+  border-radius: 4rem;
+  background: linear-gradient(
+    var(--white-color),
+    10%,
+    rgba(255, 255, 255, 0.5)
+  );
+}
+
+.modal .modal-box .city {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin: 2.5rem auto 0 auto;
+  text-align: center;
+}
+
+.modal .modal-box .city li {
+  height: 8rem;
+  margin-right: 0.7rem;
+  list-style: none;
+}
+
+.modal .modal-box .city li .up {
+  width: 6.2rem;
+  height: calc(50% - 0.2rem);
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: var(--red-color);
+  box-shadow: inset var(--box-shadow);
+  z-index: 1;
+}
+
+.modal .modal-box .city li .down {
+  position: relative;
+  top: 0.2rem;
+  width: 6.2rem;
+  height: calc(50% - 0.2rem);
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: var(--red-color);
+}
+
+.modal .modal-box .city li span {
+  position: relative;
+  bottom: 7rem;
+  font-size: 5.8rem;
+  font-weight: 700;
+  color: var(--white-color);
+}
+
+.modal .modal-box .submit-btn {
+  width: 100%;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.modal .modal-box .submit-btn button {
+  width: 11.25rem;
+  height: 3.75rem;
+  padding-bottom: 0.188em;
+  border: 5px solid var(--white-color);
+  background-color: rgba(255, 255, 255, 0);
+  font-size: calc(var(--font-medium) * 1.5);
+  font-weight: 700;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.modal .modal-box .map-and-form {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 100%;
+  margin: 4.5rem auto;
+}
+
+.modal .modal-box .map-and-form .map-and-location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+  height: 100%;
+}
+
+.modal .modal-box .map-and-form .map-and-location #mini-map {
+  width: 100%;
+  height: 97%;
+}
+
+.modal .modal-box .map-and-form .map-and-location .location {
+  margin-top: 0.25rem;
+  font-size: var(--font-medium);
+  color: white;
+}
+
+.modal .modal-box .map-and-form .form {
+  display: flex;
+  justify-content: center;
+  width: 65%;
+  height: calc(97% - 0.25rem);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.modal .modal-box .map-and-form .form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 85%;
+  height: 100%;
+}
+
+.modal .modal-box .map-and-form .form form * {
+  border: 2.5px solid white;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.modal .modal-box .map-and-form .form form input {
+  height: 7.5%;
+}
+
+.modal .modal-box .map-and-form .form form input[type='file'] {
+  width: 20%;
+  height: 7.5%;
+}
+
+.modal .modal-box .map-and-form .form form textarea {
+  height: 37.5%;
+}
+
+.modal .modal-box .map-and-form .form form input::placeholder,
+.modal .modal-box .map-and-form .form form textarea::placeholder {
+  font-size: calc(var(--font-medium) * 1.4);
+  font-weight: lighter;
+  color: white;
+  background-image: url(../img/user-solid.svg);
+  background-size: contain;
+  background-position: 98% top;
+  background-repeat: no-repeat;
+}
+
+.hidden {
+  display: none;
 }

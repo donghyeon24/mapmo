@@ -11,12 +11,14 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/main_public.css' %}">
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRgCEQvHMAJaK6SAYkpbbizy5heP94EJk&callback=initMap&libraries=&v=weekly"
-    async defer></script>
   <script src="{% static 'js/google_maps.js' %}" defer></script>
   <script src="{% static 'js/main.js' %}" defer></script>
+  <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js" defer></script>
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRgCEQvHMAJaK6SAYkpbbizy5heP94EJk&callback=initMap&libraries=&v=weekly"
+  async defer></script>
 </head>
+
 
 <body>
   <div id="map"></div>
@@ -53,6 +55,68 @@
   <div class="write-btn">
     <button>글쓰기</button>
   </div>
+
+  <div class="modal hidden">
+    <div class="background"></div>
+    <div class="modal-box">
+      <ul class="city">
+        <li>
+          <div class="up"></div>
+          <div class="down"></div>
+          <span>L</span>
+        </li>
+        <li>
+          <div class="up"></div>
+          <div class="down"></div>
+          <span>O</span>
+        </li>
+        <li>
+          <div class="up"></div>
+          <div class="down"></div>
+          <span>N</span>
+        </li>
+        <li>
+          <div class="up"></div>
+          <div class="down"></div>
+          <span>D</span>
+        </li>
+        <li>
+          <div class="up"></div>
+          <div class="down"></div>
+          <span>O</span>
+        </li>
+        <li>
+          <div class="up"></div>
+          <div class="down"></div>
+          <span>N</span>
+        </li>
+      </ul>
+
+      <main class="map-and-form">
+        <section class="map-and-location">
+          <div id="mini-map"></div>
+          <span class="location">
+            London HA9 0WS, United Kingdom</span>
+        </section>
+        <section class="form">
+          <form method="POST" action="{% url 'write_public' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="   name">
+            <input type="text" name="title" placeholder="   title">
+            <input type="file" name="img" placeholder="image">
+            <input type="hidden" name="lat" id="lat" value=0.0> 
+            <input type="hidden" name="lng" id="lng" value=0.0>
+            <textarea name="body" cols="30" rows="10" placeholder="   body"></textarea>
+        </section>
+      </main>
+
+      <div class="submit-btn">
+        <button type="submit" name="submit">작성하기</button>
+      </div>
+    </form>
+    </div>
+  </div>
+  <script src="{% static 'js/search_location.js' %}" defer></script>
 </body>
 
 </html>
