@@ -18,6 +18,9 @@ def write_public(request):
     PublicPost.title = request.POST['title']
     PublicPost.img = request.FILES['img']
     PublicPost.body = request.POST['body']
+    PublicPost.lat = request.POST['lat']
+    PublicPost.lng = request.POST['lng']
+
     PublicPost.save()
     return render(request,"main_public.html")
   else:
