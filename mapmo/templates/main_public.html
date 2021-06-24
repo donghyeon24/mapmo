@@ -21,19 +21,17 @@
     var get_location = "{{locations}}".replace(/&#x27;/g,"\"");
     var placeData = JSON.parse(get_location);
 
+
     const locations = [
-      
-      { lat: -31.56391, lng: 147.154312 },
-      { lat: -33.718234, lng: 150.363181 },
-      { lat: -33.727111, lng: 150.371124 },
+
     ];
-    console.log(locations);
-    
-    for (const location of get_location){
+
+
+    for (const location of placeData){
 
       locations.push(location);
     }
-    console.log(locations);
+    console.log(locations)
 
 
   </script>
