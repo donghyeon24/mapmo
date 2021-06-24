@@ -117,6 +117,7 @@ function initMap() {
       },
     ],
   });
+
   // Create an array of alphabetical characters used to label the markers.
   const labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   // Add some markers to the map.
@@ -129,6 +130,7 @@ function initMap() {
       label: labels[i % labels.length],
     });
   });
+
   // Options to pass along to the marker clusterer
   const clusterOptions = {
     imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
@@ -139,6 +141,7 @@ function initMap() {
 
   // Add a marker clusterer to manage the markers.
   new MarkerClusterer(map, markers, clusterOptions);
+
 
   const miniMap = new google.maps.Map(document.getElementById('mini-map'), {
     center: { lat: 25, lng: 20 },
@@ -266,6 +269,7 @@ function initMap() {
 }
 
 const locations = [
+
   { lat: -31.56391, lng: 147.154312 },
   { lat: -33.718234, lng: 150.363181 },
   { lat: -33.727111, lng: 150.371124 },
@@ -290,4 +294,3 @@ const locations = [
   { lat: -42.735258, lng: 147.438 },
   { lat: -43.999792, lng: 170.463352 },
 ];
-

@@ -92,14 +92,16 @@
         </li>
       </ul>
 
-      <main class="map-and-form">
+
+      <!-- <main class="map-and-form"> 
+      
         <section class="map-and-location">
           <div id="mini-map"></div>
           <span class="location">
             London HA9 0WS, United Kingdom</span>
         </section>
         <section class="form">
-          <form method="POST" action="{% url 'write_public' %}" enctype="multipart/form-data">
+       <form method="POST" action="{% url 'write_public' %}" enctype="multipart/form-data">
             {% csrf_token %}
             <input type="text" name="name" placeholder="   name">
             <input type="text" name="title" placeholder="   title">
@@ -107,7 +109,40 @@
             <input type="hidden" name="lat" id="lat" value=0.0> 
             <input type="hidden" name="lng" id="lng" value=0.0>
             <textarea name="body" cols="30" rows="10" placeholder="   body"></textarea>
-        </section>
+        </form>
+</section>
+      </main> -->
+      
+      <main class="preview-list">
+        <button class="to-prev-btn">
+          <i class="fas fa-chevron-left sm"></i>
+          <i class="fas fa-chevron-left md"></i>
+          <i class="fas fa-chevron-left lg"></i>
+        </button>
+        <ul>
+          <li class="preview0 hidden"><img src="{% static 'img/preview0.jpg' %}" alt=""></li>
+          <li class="preview1"><img src="{% static 'img/preview1.jpg' %}" alt=""></li>
+          <li class="preview2"><img src="{% static 'img/preview2.jpg' %}" alt=""></li>
+          <li class="preview3"><img src="{% static 'img/preview3.jpg' %}" alt=""></li>
+          <li class="preview-center"><img src="{% static 'img/preview-center.jpg' %}" alt=""></li>
+          <li class="preview5"><img src="{% static 'img/preview5.jpg' %}" alt=""></li>
+          <li class="preview6"><img src="{% static 'img/preview6.jpg' %}" alt=""></li>
+          <li class="preview7"><img src="{% static 'img/preview7.jpg' %}" alt=""></li>
+          <li class="preview8 hidden"><img src="{% static 'img/preview8.jpg' %}" alt=""></li>
+          <!-- <li class="preview1"></li>
+          <li class="preview2"></li>
+          <li class="preview3"></li>
+          <li class="preview-center"></li>
+          <li class="preview5"></li>
+          <li class="preview6"></li>
+          <li class="preview7"></li> -->
+        </ul>
+        <button class="to-post-btn">
+          <i class="fas fa-chevron-right lg"></i>
+          <i class="fas fa-chevron-right md"></i>
+          <i class="fas fa-chevron-right sm"></i>
+        </button>
+
       </main>
 
       <div class="submit-btn">
