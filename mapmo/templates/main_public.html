@@ -15,8 +15,25 @@
   <script src="{% static 'js/main.js' %}" defer></script>
   <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js" defer></script>
   <script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRgCEQvHMAJaK6SAYkpbbizy5heP94EJk&callback=initMap&libraries=&v=weekly"
-  async defer></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRgCEQvHMAJaK6SAYkpbbizy5heP94EJk&callback=initMap&libraries=&v=weekly"
+    async defer></script>
+  <script>
+    var get_location = "{{locations}}";
+
+    const locations = [
+      
+      { lat: -31.56391, lng: 147.154312 },
+      { lat: -33.718234, lng: 150.363181 },
+      { lat: -33.727111, lng: 150.371124 },
+    ];
+    console.log(get_location);
+    for (const location of get_location){
+
+      console.log(location.lat);
+    }
+
+
+  </script>
 </head>
 
 

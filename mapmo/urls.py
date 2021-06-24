@@ -27,6 +27,7 @@ urlpatterns = [
     path('private', views.main_private, name='main_private'),
     path('choice', views.choice, name='choice'),
     path('write_public', views.write_public, name="write_public"),
+    path('write_friends', views.write_friends, name="write_friends"),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT,}),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

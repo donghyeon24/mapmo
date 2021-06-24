@@ -10,3 +10,6 @@ class Public(models.Model):
     lat = models.FloatField(null=True)
     lng = models.FloatField(null=True)
     
+    def get_latlng(self):
+        return {'lat':self.lat, 'lng':self.lng}
+    

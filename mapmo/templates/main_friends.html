@@ -98,12 +98,14 @@
             London HA9 0WS, United Kingdom</span>
         </section>
         <section class="form">
-          <form method="POST" action="{% url 'write_public' %}" enctype="multipart/form-data">
+          <form method="POST" action="{% url 'write_friends' %}" enctype="multipart/form-data">
             {% csrf_token %}
             <input type="text" name="title" placeholder="   title">
             <input type="file" name="img" placeholder="image">
             <textarea name="body" cols="30" rows="10" placeholder="   body"></textarea>
-        </section>
+            <input type="hidden" name="lat" id="lat" value=0.0> 
+            <input type="hidden" name="lng" id="lng" value=0.0>
+          </section>
       </main>
 
       <div class="submit-btn">
@@ -149,25 +151,6 @@
         </li>
       </ul>
 
-      <main class="map-and-form">
-        <section class="map-and-location">
-          <div id="mini-map"></div>
-          <span class="location">
-            London HA9 0WS, United Kingdom</span>
-        </section>
-        <section class="form">
-          <form method="POST" action="{% url 'write_public' %}" enctype="multipart/form-data">
-            {% csrf_token %}
-            <input type="text" name="title" placeholder="   title">
-            <input type="file" name="img" placeholder="image">
-            <textarea name="body" cols="30" rows="10" placeholder="   body"></textarea>
-        </section>
-      </main>
-
-      <div class="submit-btn">
-        <button type="submit" name="submit">작성하기</button>
-      </div>
-    </form>
     </div>
   </div>
 </body>
