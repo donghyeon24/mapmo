@@ -93,7 +93,7 @@
       </ul>
 
 
-      <!-- <main class="map-and-form"> 
+      <main class="map-and-form"> 
       
         <section class="map-and-location">
           <div id="mini-map"></div>
@@ -109,11 +109,15 @@
             <input type="hidden" name="lat" id="lat" value=0.0> 
             <input type="hidden" name="lng" id="lng" value=0.0>
             <textarea name="body" cols="30" rows="10" placeholder="   body"></textarea>
-        </form>
+            
 </section>
-      </main> -->
+<div class="submit-btn">
+  <button type="submit" name="submit">작성하기</button>
+</div>
+</form>
+      </main>
       
-      <main class="preview-list">
+      <main class="preview-list hidden">
         <button class="to-prev-btn">
           <i class="fas fa-chevron-left sm"></i>
           <i class="fas fa-chevron-left md"></i>
@@ -145,10 +149,6 @@
 
       </main>
 
-      <div class="submit-btn">
-        <button type="submit" name="submit">작성하기</button>
-      </div>
-    </form>
     </div>
   </div>
   <script src="{% static 'js/search_location.js' %}" defer></script>
