@@ -25,7 +25,8 @@ def write_public(request):
     PublicPost = Public()
     PublicPost.name = request.POST['name']
     PublicPost.title = request.POST['title']
-    PublicPost.img = request.FILES['img']
+    if request.FILES.get('img') is not None:
+      PublicPost.img = request.FILES['img']
     PublicPost.body = request.POST['body']
     PublicPost.lat = request.POST['lat']
     PublicPost.lng = request.POST['lng']
