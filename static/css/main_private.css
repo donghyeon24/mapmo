@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@700&display=swap");
 
 :root {
   /* Color */
@@ -6,8 +6,8 @@
   --gray-color: #808080;
   --red-color: #e84c3c;
   --black-color: #0e171d;
-  --yellow-color: #DDFD18;
-  
+  --yellow-color: #ddfd18;
+
   /* Font Size */
   --font-large: 5rem;
   --font-medium: 1rem;
@@ -15,13 +15,14 @@
   /* Text Shadow */
   --text-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px;
   --box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  --private-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
   /* Padding */
 }
 
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -51,10 +52,10 @@ header .logo-and-status {
 }
 
 header .logo-and-status .logo {
-  font-family: 'Courgette';
+  font-family: "Courgette";
   font-size: var(--font-large);
   line-height: 5rem;
-  color: #DDFD18;
+  color: #ddfd18;
   text-shadow: var(--text-shadow);
 }
 
@@ -71,7 +72,7 @@ header .logo-and-status .status a {
 }
 
 header .logo-and-status .status .selected {
-  color: #DDFD18;
+  color: #ddfd18;
 }
 
 header .account-btn {
@@ -90,12 +91,12 @@ header .account-btn {
 
 header .account-btn .fa-bars {
   font-size: calc(var(--font-medium) * 1.5);
-  color: #F3B191;
+  color: #f3b191;
 }
 
 header .account-btn .fa-user-circle {
   font-size: calc(var(--font-medium) * 1.8);
-  color: #F3B191;
+  color: #f3b191;
 }
 
 header .account-menu {
@@ -138,11 +139,11 @@ header .account-menu.active .signup a {
   width: 11.25rem;
   height: 3.75rem;
   padding-bottom: 0.188em;
-  border: 5px solid #DDFD18;
+  border: 5px solid #ddfd18;
   background-color: rgba(255, 255, 255, 0);
   font-size: calc(var(--font-medium) * 1.5);
   font-weight: 700;
-  color: #DDFD18;
+  color: #ddfd18;
   cursor: pointer;
 }
 
@@ -174,9 +175,9 @@ header .account-menu.active .signup a {
   padding: 15px;
   border-radius: 4rem;
   background: linear-gradient(
-    var(--white-color),
+    var(--yellow-color),
     10%,
-    rgba(255, 255, 255, 0.5)
+    rgba(255, 255, 255, 0.2)
   );
 }
 
@@ -198,8 +199,8 @@ header .account-menu.active .signup a {
   width: 6.2rem;
   height: calc(50% - 0.2rem);
   border-radius: 0.5rem 0.5rem 0 0;
-  background-color: var(--red-color);
-  box-shadow: inset var(--box-shadow);
+  background-color: var(--white-color);
+  box-shadow: inset var(--private-shadow);
   z-index: 1;
 }
 
@@ -209,7 +210,8 @@ header .account-menu.active .signup a {
   width: 6.2rem;
   height: calc(50% - 0.2rem);
   border-radius: 0 0 0.5rem 0.5rem;
-  background-color: var(--red-color);
+  background-color: var(--white-color);
+  box-shadow: inset var(--private-shadow);
 }
 
 .modal .modal-box .city li span {
@@ -217,7 +219,7 @@ header .account-menu.active .signup a {
   bottom: 7rem;
   font-size: 5.8rem;
   font-weight: 700;
-  color: var(--white-color);
+  color: var(--black-color);
 }
 
 .modal .modal-box .submit-btn {
@@ -230,11 +232,11 @@ header .account-menu.active .signup a {
   width: 11.25rem;
   height: 3.75rem;
   padding-bottom: 0.188em;
-  border: 5px solid var(--white-color);
+  border: 5px solid var(--yellow-color);
   background-color: rgba(255, 255, 255, 0);
   font-size: calc(var(--font-medium) * 1.5);
   font-weight: 700;
-  color: var(--white-color);
+  color: var(--yellow-color);
   cursor: pointer;
 }
 
@@ -282,7 +284,7 @@ header .account-menu.active .signup a {
 }
 
 .modal .modal-box .map-and-form .form form * {
-  border: 2.5px solid white;
+  border: 2.5px solid black;
   background-color: rgba(255, 255, 255, 0);
 }
 
@@ -290,7 +292,7 @@ header .account-menu.active .signup a {
   height: 7.5%;
 }
 
-.modal .modal-box .map-and-form .form form input[type='file'] {
+.modal .modal-box .map-and-form .form form input[type="file"] {
   width: 20%;
   height: 7.5%;
 }
@@ -303,7 +305,7 @@ header .account-menu.active .signup a {
 .modal .modal-box .map-and-form .form form textarea::placeholder {
   font-size: calc(var(--font-medium) * 1.4);
   font-weight: lighter;
-  color: white;
+  color: black;
   background-image: url(../img/user-solid.svg);
   background-size: contain;
   background-position: 98% top;
