@@ -139,6 +139,7 @@ header .account-menu.active .signup a {
   height: 3.75rem;
   padding-bottom: 0.188em;
   border: 5px solid var(--green-color);
+  border-radius: 10px;
   background-color: rgba(255, 255, 255, 0);
   font-size: calc(var(--font-medium) * 1.5);
   font-weight: 700;
@@ -232,6 +233,7 @@ header .account-menu.active .signup a {
   height: 3.75rem;
   padding-bottom: 0.188em;
   border: 5px solid var(--green-color);
+  border-radius: 10px;
   background-color: rgba(255, 255, 255, 0);
   font-size: calc(var(--font-medium) * 1.5);
   font-weight: 700;

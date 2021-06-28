@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@700&display=swap");
 
 :root {
   /* Color */
@@ -20,7 +20,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -50,7 +50,7 @@ header .logo-and-status {
 }
 
 header .logo-and-status .logo {
-  font-family: 'Courgette';
+  font-family: "Courgette";
   font-size: var(--font-large);
   line-height: 5rem;
   color: var(--white-color);
@@ -138,6 +138,7 @@ header .account-menu.active .signup a {
   height: 3.75rem;
   padding-bottom: 0.188em;
   border: 5px solid var(--white-color);
+  border-radius: 10px;
   background-color: rgba(255, 255, 255, 0);
   font-size: calc(var(--font-medium) * 1.5);
   font-weight: 700;
@@ -231,6 +232,7 @@ header .account-menu.active .signup a {
   padding-bottom: 0.188em;
   border: 5px solid var(--white-color);
   background-color: rgba(255, 255, 255, 0);
+  border-radius: 10px;
   font-size: calc(var(--font-medium) * 1.5);
   font-weight: 700;
   color: var(--white-color);
@@ -289,7 +291,7 @@ header .account-menu.active .signup a {
   height: 7.5%;
 }
 
-.modal .modal-box .map-and-form .form form input[type='file'] {
+.modal .modal-box .map-and-form .form form input[type="file"] {
   width: 20%;
   height: 7.5%;
 }
@@ -308,7 +310,6 @@ header .account-menu.active .signup a {
   background-position: 98% top;
   background-repeat: no-repeat;
 }
-
 
 /* preview-list */
 .modal .modal-box .preview-list {
@@ -365,54 +366,44 @@ header .account-menu.active .signup a {
   background-size: cover;
   background-position: center;
 }
-
 .modal .modal-box .preview-list ul .preview1,
 .modal .modal-box .preview-list ul .preview7 {
   width: 120px;
   height: 120px;
   filter: blur(0.75rem);
 }
-
 .modal .modal-box .preview-list ul .preview2,
 .modal .modal-box .preview-list ul .preview6 {
   width: 200px;
   height: 200px;
   filter: blur(0.5rem);
 }
-
 .modal .modal-box .preview-list ul .preview3,
 .modal .modal-box .preview-list ul .preview5 {
   width: 300px;
   height: 300px;
   filter: blur(0.25rem);
 }
-
 .modal .modal-box .preview-list ul .preview-center {
   width: 450px;
   height: 450px;
   background-image: url('../img/preview-center.jpg');
 }
-
 .modal .modal-box .preview-list ul .preview1 {
   background-image: url('../img/preview1.jpg');
 }
-
 .modal .modal-box .preview-list ul .preview2 {
   background-image: url('../img/preview2.jpg');
 }
-
 .modal .modal-box .preview-list ul .preview3 {
   background-image: url('../img/preview3.jpg');
 }
-
 .modal .modal-box .preview-list ul .preview5 {
   background-image: url('../img/preview5.jpg');
 }
-
 .modal .modal-box .preview-list ul .preview6 {
   background-image: url('../img/preview6.jpg');
 }
-
 .modal .modal-box .preview-list ul .preview7 {
   background-image: url('../img/preview.jpg');
 } */
@@ -442,7 +433,6 @@ header .account-menu.active .signup a {
   width: 420px;
   height: 420px;
 }
-
 
 .hidden {
   display: none;

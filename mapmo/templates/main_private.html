@@ -16,6 +16,26 @@
     async defer></script>
   <script src="{% static 'js/google_maps_private.js' %}" defer></script>
   <script src="{% static 'js/main.js' %}" defer></script>
+  <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js" defer></script>
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRgCEQvHMAJaK6SAYkpbbizy5heP94EJk&callback=initMap&libraries=&v=weekly"
+  async defer></script>
+
+  <script>
+    // 이상하게 뜨는 문자열을 제거
+    var get_location = "{{locations}}".replace(/&#x27;/g,"\"");
+    var placeData = JSON.parse(get_location);
+
+    //구글맵 클러스터를 위해 위치정보 받아오기
+    const locations = [];
+
+    //locations 배열로 데이터들 넣는 과정
+    for (const location of placeData){
+      locations.push(location);
+    }
+
+    //console.log(locations)
+  </script>
 </head>
 
 
@@ -24,7 +44,7 @@
 
   <header>
     <div class="logo-and-status">
-      <a class="logo" href="#">map<br>mo</a>
+      <a class="logo" href="{% url 'index' %}">map<br>mo</a>
       <ul class="status">
         <a href="{% url 'main_public' %}">
           <li>public</li>
@@ -98,12 +118,12 @@
             London HA9 0WS, United Kingdom</span>
         </section>
         <section class="form">
-          <form method="POST" action="{% url 'write_public' %}" enctype="multipart/form-data">
+          <form method="POST" action="{% url 'write_private' %}" enctype="multipart/form-data">
             {% csrf_token %}
-            <input type="text" name="name" placeholder="   name">
-            <input type="text" name="title" placeholder="   title">
+            <input type="text" name="name" placeholder="   name" required>
+            <input type="text" name="title" placeholder="   title" required>
             <input type="file" name="img" placeholder="image">
-            <textarea name="body" cols="30" rows="10" placeholder="   body"></textarea>
+            <textarea name="body" cols="30" rows="10" placeholder="   body" required></textarea>
             <input type="hidden" name="lat" id="lat" value=0.0> 
             <input type="hidden" name="lng" id="lng" value=0.0>
           </section>
@@ -115,6 +135,8 @@
     </form>
     </div>
   </div>
+
+  <script src="{% static 'js/search_location.js' %}" defer></script>
 </body>
 
 </html>
