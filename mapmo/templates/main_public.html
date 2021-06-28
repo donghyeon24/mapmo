@@ -23,6 +23,7 @@
     var get_location = "{{locations}}".replace(/&#x27;/g,"\"");
     var placeData = JSON.parse(get_location);
 
+
     //구글맵 클러스터를 위해 위치정보 받아오기
     const locations = [];
 
@@ -30,6 +31,7 @@
     for (const location of placeData){
       locations.push(location);
     }
+
 
     //console.log(locations)
   </script>
