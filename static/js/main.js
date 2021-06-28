@@ -15,9 +15,11 @@ document
 // write 버튼
 const writeOpen = () => {
   document.querySelector('.modal').classList.remove('hidden');
+  document.querySelector('.modal .modal-box .write').classList.remove('hidden');
 };
 const writeClose = () => {
   document.querySelector('.modal').classList.add('hidden');
+  document.querySelector('.modal .modal-box .preview').classList.add('hidden');
 };
 
 document.querySelector('.write-btn').addEventListener('click', writeOpen);
@@ -25,33 +27,33 @@ document.querySelector('.background').addEventListener('click', writeClose);
 
 //
 //
-// preview-list 내 to-prev-btn & to-post-btn
+// preview 내 to-prev-btn & to-post-btn
 const preview0 = document.querySelector(
-  '.modal .modal-box .preview-list ul .preview0'
+  '.modal .modal-box .preview .preview-list ul .preview0'
 );
 const preview1 = document.querySelector(
-  '.modal .modal-box .preview-list ul .preview1'
+  '.modal .modal-box .preview .preview-list ul .preview1'
 );
 const preview2 = document.querySelector(
-  '.modal .modal-box .preview-list ul .preview2'
+  '.modal .modal-box .preview .preview-list ul .preview2'
 );
 const preview3 = document.querySelector(
-  '.modal .modal-box .preview-list ul .preview3'
+  '.modal .modal-box .preview .preview-list ul .preview3'
 );
 const previewCenter = document.querySelector(
-  '.modal .modal-box .preview-list ul .preview-center'
+  '.modal .modal-box .preview .preview-list ul .preview-center'
 );
 const preview5 = document.querySelector(
-  '.modal .modal-box .preview-list ul .preview5'
+  '.modal .modal-box .preview .preview-list ul .preview5'
 );
 const preview6 = document.querySelector(
-  '.modal .modal-box .preview-list ul .preview6'
+  '.modal .modal-box .preview .preview-list ul .preview6'
 );
 const preview7 = document.querySelector(
-  '.modal .modal-box .preview-list ul .preview7'
+  '.modal .modal-box .preview .preview-list ul .preview7'
 );
 const preview8 = document.querySelector(
-  '.modal .modal-box .preview-list ul .preview8'
+  '.modal .modal-box .preview .preview-list ul .preview8'
 );
 
 const toPrev = () => {
@@ -95,7 +97,6 @@ const toPost = () => {
   previewCenter.classList.remove('preview-center');
   previewCenter.classList.add('preview5');
 
-
   preview5.classList.remove('preview5');
   preview5.classList.add('preview6');
 
@@ -107,12 +108,11 @@ const toPost = () => {
 };
 
 document
-  .querySelector('.modal .modal-box .preview-list .to-prev-btn')
+  .querySelector('.modal .modal-box .preview .preview-list .to-prev-btn')
   .addEventListener('click', toPrev);
 document
-  .querySelector('.modal .modal-box .preview-list .to-post-btn')
+  .querySelector('.modal .modal-box .preview .preview-list .to-post-btn')
   .addEventListener('click', toPost);
 
-document.querySelector(".write-btn").addEventListener("click", writeOpen);
-document.querySelector(".background").addEventListener("click", writeClose);
-
+document.querySelector('.write-btn').addEventListener('click', writeOpen);
+document.querySelector('.background').addEventListener('click', writeClose);

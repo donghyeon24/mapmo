@@ -133,15 +133,23 @@ function initMap() {
 
   // Options to pass along to the marker clusterer
   const clusterOptions = {
-    imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
+    imagePath:
+      'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
     gridSize: 100,
     zoomOnClick: false,
     maxZoom: 10,
   };
 
   // Add a marker clusterer to manage the markers.
-  new MarkerClusterer(map, markers, clusterOptions);
+  const markerClusterer = new MarkerClusterer(map, markers, clusterOptions);
 
+  markerClusterer.addListener('click', () => {
+    document.querySelector('.modal').classList.remove('hidden');
+    document.querySelector('.modal .modal-box .write').classList.add('hidden');
+    document
+      .querySelector('.modal .modal-box .preview')
+      .classList.remove('hidden');
+  });
 
   const miniMap = new google.maps.Map(document.getElementById('mini-map'), {
     center: { lat: 25, lng: 20 },

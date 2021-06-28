@@ -237,7 +237,15 @@ header .account-menu.active .signup a {
   cursor: pointer;
 }
 
-.modal .modal-box .map-and-form {
+.modal .modal-box .write {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.modal .modal-box .write .map-and-form {
   display: flex;
   justify-content: space-between;
   width: 90%;
@@ -245,7 +253,7 @@ header .account-menu.active .signup a {
   margin: 4.5rem auto;
 }
 
-.modal .modal-box .map-and-form .map-and-location {
+.modal .modal-box .write .map-and-form .map-and-location {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -253,18 +261,18 @@ header .account-menu.active .signup a {
   height: 100%;
 }
 
-.modal .modal-box .map-and-form .map-and-location #mini-map {
+.modal .modal-box .write .map-and-form .map-and-location #mini-map {
   width: 100%;
   height: 97%;
 }
 
-.modal .modal-box .map-and-form .map-and-location .location {
+.modal .modal-box .write .map-and-form .map-and-location .location {
   margin-top: 0.25rem;
   font-size: var(--font-medium);
   color: white;
 }
 
-.modal .modal-box .map-and-form .form {
+.modal .modal-box .write .map-and-form .form {
   display: flex;
   justify-content: center;
   width: 65%;
@@ -272,7 +280,7 @@ header .account-menu.active .signup a {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-.modal .modal-box .map-and-form .form form {
+.modal .modal-box .write .map-and-form .form form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -280,26 +288,26 @@ header .account-menu.active .signup a {
   height: 100%;
 }
 
-.modal .modal-box .map-and-form .form form * {
+.modal .modal-box .write .map-and-form .form form * {
   border: 2.5px solid white;
   background-color: rgba(255, 255, 255, 0);
 }
 
-.modal .modal-box .map-and-form .form form input {
+.modal .modal-box .write .map-and-form .form form input {
   height: 7.5%;
 }
 
-.modal .modal-box .map-and-form .form form input[type='file'] {
+.modal .modal-box .write .map-and-form .form form input[type='file'] {
   width: 20%;
   height: 7.5%;
 }
 
-.modal .modal-box .map-and-form .form form textarea {
+.modal .modal-box .write .map-and-form .form form textarea {
   height: 37.5%;
 }
 
-.modal .modal-box .map-and-form .form form input::placeholder,
-.modal .modal-box .map-and-form .form form textarea::placeholder {
+.modal .modal-box .write .map-and-form .form form input::placeholder,
+.modal .modal-box .write .map-and-form .form form textarea::placeholder {
   font-size: calc(var(--font-medium) * 1.4);
   font-weight: lighter;
   color: white;
@@ -309,15 +317,24 @@ header .account-menu.active .signup a {
   background-repeat: no-repeat;
 }
 
-
 /* preview-list */
-.modal .modal-box .preview-list {
+.modal .modal-box .preview {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-.modal .modal-box .preview-list .to-prev-btn,
-.modal .modal-box .preview-list .to-post-btn {
+.modal .modal-box .preview .preview-list {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+
+.modal .modal-box .preview .preview-list .to-prev-btn,
+.modal .modal-box .preview .preview-list .to-post-btn {
   display: flex;
   align-items: center;
   border: none;
@@ -327,22 +344,22 @@ header .account-menu.active .signup a {
   filter: blur(1px);
 }
 
-.modal .modal-box .preview-list .to-prev-btn .sm,
-.modal .modal-box .preview-list .to-post-btn .sm {
+.modal .modal-box .preview .preview-list .to-prev-btn .sm,
+.modal .modal-box .preview .preview-list .to-post-btn .sm {
   font-size: 1rem;
 }
 
-.modal .modal-box .preview-list .to-prev-btn .md,
-.modal .modal-box .preview-list .to-post-btn .md {
+.modal .modal-box .preview .preview-list .to-prev-btn .md,
+.modal .modal-box .preview .preview-list .to-post-btn .md {
   font-size: 2rem;
 }
 
-.modal .modal-box .preview-list .to-prev-btn .lg,
-.modal .modal-box .preview-list .to-post-btn .lg {
+.modal .modal-box .preview .preview-list .to-prev-btn .lg,
+.modal .modal-box .preview .preview-list .to-post-btn .lg {
   font-size: 3rem;
 }
 
-.modal .modal-box .preview-list ul {
+.modal .modal-box .preview .preview-list ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -352,98 +369,41 @@ header .account-menu.active .signup a {
   /* overflow-x: scroll; */
 }
 
-.modal .modal-box .preview-list ul {
+.modal .modal-box .preview .preview-list ul {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
 
-.modal .modal-box .preview-list ul::-webkit-scrollbar {
+.modal .modal-box .preview .preview-list ul::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
 }
 
-/* .modal .modal-box .preview-list ul li {
-  background-size: cover;
-  background-position: center;
-}
-
-.modal .modal-box .preview-list ul .preview1,
-.modal .modal-box .preview-list ul .preview7 {
-  width: 120px;
-  height: 120px;
-  filter: blur(0.75rem);
-}
-
-.modal .modal-box .preview-list ul .preview2,
-.modal .modal-box .preview-list ul .preview6 {
-  width: 200px;
-  height: 200px;
-  filter: blur(0.5rem);
-}
-
-.modal .modal-box .preview-list ul .preview3,
-.modal .modal-box .preview-list ul .preview5 {
-  width: 300px;
-  height: 300px;
-  filter: blur(0.25rem);
-}
-
-.modal .modal-box .preview-list ul .preview-center {
-  width: 450px;
-  height: 450px;
-  background-image: url('../img/preview-center.jpg');
-}
-
-.modal .modal-box .preview-list ul .preview1 {
-  background-image: url('../img/preview1.jpg');
-}
-
-.modal .modal-box .preview-list ul .preview2 {
-  background-image: url('../img/preview2.jpg');
-}
-
-.modal .modal-box .preview-list ul .preview3 {
-  background-image: url('../img/preview3.jpg');
-}
-
-.modal .modal-box .preview-list ul .preview5 {
-  background-image: url('../img/preview5.jpg');
-}
-
-.modal .modal-box .preview-list ul .preview6 {
-  background-image: url('../img/preview6.jpg');
-}
-
-.modal .modal-box .preview-list ul .preview7 {
-  background-image: url('../img/preview.jpg');
-} */
-
-.modal .modal-box .preview-list ul .preview1 img,
-.modal .modal-box .preview-list ul .preview7 img {
+.modal .modal-box .preview .preview-list ul .preview1 img,
+.modal .modal-box .preview .preview-list ul .preview7 img {
   width: 100px;
   height: 100px;
   filter: blur(0.75rem);
 }
 
-.modal .modal-box .preview-list ul .preview2 img,
-.modal .modal-box .preview-list ul .preview6 img {
+.modal .modal-box .preview .preview-list ul .preview2 img,
+.modal .modal-box .preview .preview-list ul .preview6 img {
   width: 180px;
   height: 180px;
   filter: blur(0.5rem);
 }
 
-.modal .modal-box .preview-list ul .preview3 img,
-.modal .modal-box .preview-list ul .preview5 img {
+.modal .modal-box .preview .preview-list ul .preview3 img,
+.modal .modal-box .preview .preview-list ul .preview5 img {
   width: 280px;
   height: 280px;
   filter: blur(0.25rem);
 }
 
-.modal .modal-box .preview-list ul .preview-center img {
+.modal .modal-box .preview .preview-list ul .preview-center img {
   width: 420px;
   height: 420px;
 }
 
-
 .hidden {
-  display: none;
+  display: none !important;
 }
